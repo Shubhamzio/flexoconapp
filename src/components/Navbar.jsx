@@ -7,7 +7,6 @@ const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Optional: Add subtle background on scroll for readability while keeping initial transparency
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 40);
     window.addEventListener("scroll", handleScroll);
