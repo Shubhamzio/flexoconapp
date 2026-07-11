@@ -1,0 +1,119 @@
+.flx-nav-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9999;
+  isolation: isolate;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.flx-nav-topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 60px;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.flx-nav-logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.flx-nav-logoWrapper {
+  background-color: transparent;
+  padding: 0px;
+  border-radius: 5px;
+}
+
+.flx-nav-logoImage {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+.flx-nav-companyName {
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.flx-nav-socialContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.flx-nav-socialIcon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: #185fa5;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.2s ease;
+}
+
+.flx-nav-socialIcon-hover {
+  transform: scale(1.15) translateY(-2px);
+  background-color: #0c447c;
+}
+
+.flx-nav-menu {
+  background-color: transparent;
+  padding: 0 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.flx-nav-navList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flx-nav-navItem {
+  position: relative;
+  padding: 16px 22px;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.flx-nav-navItem-hover {
+  color: #ffffff;
+  opacity: 0.8;
+  transform: translateY(-1px);
+}
+
+.flx-nav-activeNavItem {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.flx-nav-underline {
+  position: absolute;
+  bottom: 0px;
+  left: 22px;
+  right: 22px;
+  height: 3px;
+  transform-origin: bottom center;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  border-radius: 2px 2px 0 0;
+}

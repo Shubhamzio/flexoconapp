@@ -1,0 +1,1459 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+.flx-home-scrollContainer {
+  width: 100vw;
+  height: 100vh;
+  overflow-X: hidden;
+  overflow-Y: auto;
+  background-color: #051221;
+  scroll-behavior: smooth;
+}
+
+.flx-home-heroSectionContainer {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 140px; 
+  padding-bottom: 60px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.flx-home-videoWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0; 
+}
+
+.flx-home-video { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
+
+.flx-home-videoBlueOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(5, 18, 33, 0.76); 
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
+
+.flx-home-vignetteOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(0,0,0,0) 25%, rgba(0,0,0,0.9) 100%);
+  z-index: 2;
+}
+
+.flx-home-heroSplitWrapper {
+  width: 100%;
+  padding: 0 6%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.flx-home-leftColumn { display: flex; flex-direction: column; justify-content: center; }
+.flx-home-rightColumn { position: relative; display: flex; justify-content: center; align-items: center; min-height: '400px'; }
+
+.flx-home-tagline {
+  font-size: 30px;
+  font-weight: 800; 
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+  line-height: 1.25; 
+  text-shadow: 0 1px 0 #cccccc, 0 2px 0 #b1b1b1, 0 4px 8px rgba(0,0,0,0.5);
+}
+
+.flx-home-bodyParagraph { font-size: 14.5px; font-weight: 400; color: #ffffff; line-height: 1.6; margin-bottom: 30px; opacity: 0.9; }
+.flx-home-buttonRow { display: flex; gap: 20px; align-items: center; }
+
+.flx-home-primaryBtn {
+  background-color: #00b4ec; color: #000000; border: none; padding: 14px 28px;
+  font-size: 15px; font-weight: 700; border-radius: 6px; cursor: pointer;
+  display: flex; align-items: center; transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 180, 236, 0.4), 0 0 30px rgba(0, 180, 236, 0.25);
+}
+
+.flx-home-statsContainer { 
+  display: flex; 
+  gap: 40px; 
+  margin: 40px 40px 40px 10px;
+}
+
+.flx-home-statBox { 
+  display: flex; 
+  flex-direction: column; 
+  position: relative; 
+  padding-left: 16px; 
+}
+
+.flx-home-statNumber { 
+  font-size: 32px; 
+  font-weight: 800; 
+  color: #ffffff; 
+  line-height: 1.1; 
+  border-left: 3px solid #00b4ec; 
+  padding-left: 16px; 
+  margin-left: -16px; 
+}
+.flx-home-statLabel { font-size: 10.5px; font-weight: 600; color: rgba(255, 255, 255, 0.65); letter-spacing: 1px; margin-top: 8px; line-height: 1.4; }
+.flx-home-vectorGlowRing { position: absolute; width: 380px; height: 380px; border-radius: 50%; border: 1px dashed rgba(0, 180, 236, 0.35); box-shadow: inset 0 0 40px rgba(0, 180, 236, 0.08), 0 0 60px rgba(0, 180, 236, 0.1); z-index: 1; }
+.flx-home-imageCardContainer { position: relative; width: 420px; height: 360px; display: flex; justify-content: center; align-items: center; z-index: 2; }
+.flx-home-productDisplayImage { max-width: 100%; max-height: 100%; object-fit: contain; filter: drop-shadow(0 15px 35px rgba(0,0,0,0.65)) drop-shadow(0 0 25px rgba(0, 180, 236, 0.15)); }
+.flx-home-torqueBadge { position: absolute; top: 12%; left: -5%; background-color: rgba(10, 25, 47, 0.85); border: 1px solid rgba(0, 180, 236, 0.4); backdrop-filter: blur(8px); padding: 10px 16px; border-radius: 8px; display: flex; flex-direction: column; gap: 2px; z-index: 3; box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+.flx-home-badgeTitle { font-size: 9px; font-weight: 700; color: rgba(255, 255, 255, 0.4); letter-spacing: 1px; text-transform: uppercase; }
+.flx-home-badgeValue { font-size: 14px; font-weight: 700; color: #00b4ec; }
+
+.flx-home-rangeSection {
+  position: relative;
+  width: 100vw;
+  background-color: white; 
+  padding: 100px 6% 40px 6%;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.flx-home-rangeContentContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: block; 
+}
+
+.flx-home-rangeHeaderBlock { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 8px; 
+}
+
+.flx-home-rangeMiniTag { 
+  font-size: 20px; 
+  font-weight: 600; 
+  color: #8A8A8A; 
+  margin-top: -40px;
+  letter-spacing: 3px; 
+
+  text-transform: uppercase; 
+}
+
+.flx-home-rangeMainHeading { 
+  font-size: 46px; 
+  font-weight: 800; 
+  color: #111111; 
+  line-height: 1.2; 
+  margin: 8px 0 24px 0; 
+  letter-spacing: -1px; 
+  white-space: nowrap; 
+}
+
+.flx-home-rangeCyanHighlight { 
+  color: black; 
+}
+.flx-home-rangeDescBlock { display: flex; flex-direction: column; gap: 2px; border-left: 2px solid #EAEAEA; padding-left: 16px; }
+.flx-home-rangeDescriptionText { font-size: 20px; font-weight: 400; color: #555555; line-height: 1.5; margin: 0; }
+
+.flx-home-productsGridSection {
+  position: relative;
+  width: 100vw;
+  background-color: white;
+  padding: 0 6% 120px 6%;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.flx-home-gridHeaderBlock { max-width: 1400px; margin: 0 auto 40px auto; display: flex; flex-direction: column; gap: 0px;  margin-top: -30px;  }
+.flx-home-gridMiniTag {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+
+    margin-top: -10px;      
+    margin-bottom: 35px;
+
+    font-size: 30px;
+    font-weight: 800;
+
+    color: #0b1f38;
+
+    text-transform: uppercase;
+    letter-spacing: 0px;
+
+    line-height: 1.2;
+
+    transition: all 0.3s ease;
+}
+.flx-home-gridMainHeading { font-size: 26px; font-weight: 700; color: black; margin: 0; letter-spacing: 0.5px; }
+.flx-home-gridDividerLine { width: 100%; height: 1px; background-color: rgba(0, 0, 0, 0.08); margin-top: 10px; }
+.flx-home-masterProductsGrid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; }
+
+.flx-home-productCard {
+  background-color: white;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.flx-home-productCard-hover {
+  transform: translateY(-8px);
+  border-color: rgba(0, 180, 236, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 0 30px rgba(0, 180, 236, 0.05);
+}
+
+.flx-home-cardImageContainer { position: relative; width: 100%; height: 260px; background-color: #070d16; overflow: hidden; }
+.flx-home-cardMiniTagBadge { position: absolute; top: 20px; left: 20px; background-color: rgba(7, 13, 22, 0.6); backdrop-filter: blur(8px); padding: 6px 14px; border-radius: 20px; font-size: 10px; font-weight: 700; color: #00b4ec; letter-spacing: 1px; z-index: 3; }
+.flx-home-cardImgAsset { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+.flx-home-cardImgAsset-hover { transform: scale(1.05); }
+.flx-home-imageFallbackPlaceholder { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; color: rgba(255, 255, 255, 0.15); font-size: 12px; font-weight: 500; }
+.flx-home-cardInfoContainer { padding: 28px; display: flex; flex-direction: column; gap: 12px; background-color: #0b1320; flex-grow: 1; }
+.flx-home-titleArrowRow { display: flex; justify-content: space-between; align-items: flex-start; gap: 15px; }
+.flx-home-cardProductTitle { font-size: 19px; font-weight: 700; color: #ffffff; margin: 0; line-height: 1.3; }
+.flx-home-cardArrowCircle { width: '36px'; height: '36px'; border-radius: 50%; background-color: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); display: flex; justify-content: center; align-items: center; color: rgba(255, 255, 255, 0.4); flex-shrink: 0; transition: all 0.3s ease; }
+.flx-home-cardArrowCircle-hover { background-color: #00b4ec; border-color: #00b4ec; color: #000000; }
+.flx-home-cardProductDesc { font-size: 13.5px; font-weight: 400; color: rgba(255, 255, 255, 0.45); line-height: 1.55; margin: 0; }
+.flx-home-productsGridSection{
+    padding: 0 6% 10px 6%;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.flx-home-clients-section {
+    width: 100%;
+    background: #ffffff;
+    padding: 100px 8%;
+}
+
+.flx-home-clients-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.flx-home-clients-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #0b6cb8;
+    font-family: "Poppins", sans-serif;
+    margin: 12px 0;
+    text-transform: uppercase;
+}
+
+.flx-home-clients-title span {
+    color: #0b6cb8;
+}
+
+.flx-home-clients-subtitle {
+    max-width: 720px;
+    margin: 0 auto;
+    color: #0b6cb8;
+    font-size: 16px;
+    line-height: 1.8;
+    font-family: "Poppins", sans-serif;
+}
+
+.flx-home-clients-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 28px;
+}
+
+.flx-home-client-card {
+    background: #fff;
+    border: 1px solid #ececec;
+    border-radius: 18px;
+    height: 130px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.35s ease;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+.flx-home-client-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(11,108,184,0.18);
+    border-color: #0b6cb8;
+}
+
+.flx-home-client-logo {
+    max-width: 130px;
+    max-height: 70px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.75;
+    transition: all 0.35s ease;
+}
+
+.flx-home-client-card:hover .flx-home-client-logo {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.08);
+}
+
+@media (max-width: 1200px) {
+    .flx-home-clients-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+.flx-home-clients-section{
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg,#ffffff 0%,#f5f9ff 100%);
+    padding: 50px 0 100px;  
+    margin-top: 0;
+}
+
+.flx-home-clients-header{
+    text-align: center;
+    margin: 0 0 45px 0;      
+}
+
+.flx-home-clients-title{
+    font-size: 42px;
+    font-weight: 700;
+    color: #111;
+    text-transform: uppercase;
+    margin: 8px 0 12px;      
+    line-height: 1.1;
+}
+
+.flx-home-clients-subtitle{
+    width: 60%;
+    margin: 0 auto;
+    color: #666;
+    line-height: 1.8;
+}
+
+.flx-home-logo-track{
+    overflow:hidden;
+    margin:35px 0;
+}
+
+.flx-home-logo-slider{
+    display:flex;
+    width:max-content;
+    gap:35px;
+}
+
+.flx-home-logo-slider.left{
+    animation:moveLeft 28s linear infinite;
+}
+
+.flx-home-logo-slider.right{
+    animation:moveRight 28s linear infinite;
+}
+
+.flx-home-logo-item{
+    width: 210px;
+    height: 120px;
+    background: #ffffff;
+    border-radius: 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #eef3fb;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+
+    transition: all .35s ease;
+}
+
+.flx-home-logo-item:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(24,95,165,.18);
+    border-color: #185fa5;
+}
+
+.flx-home-logo-item:hover img{
+    transform: scale(1.06);
+}
+
+.flx-home-logo-item img{
+    width: 140px;
+    max-height: 70px;
+    object-fit: contain;
+    transition: all 0.35s ease;
+}
+
+.flx-home-logo-item:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 18px 40px rgba(10,102,194,.22);
+
+}
+
+.flx-home-logo-item:hover img{
+
+    filter:none;
+
+    opacity:1;
+
+    transform:scale(1.08);
+
+}
+
+@keyframes moveLeft{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+
+}
+
+@keyframes moveRight{
+
+    from{
+        transform:translateX(-50%);
+    }
+
+    to{
+        transform:translateX(0);
+    }
+
+}
+
+@media(max-width:768px){
+
+.flx-home-logo-item{
+
+width:150px;
+height:90px;
+
+}
+
+.flx-home-logo-item img{
+
+width:95px;
+
+}
+
+.flx-home-clients-subtitle{
+
+width:90%;
+
+}
+
+}
+.flx-home-clients-section{
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg,#ffffff 0%,#f5f9ff 100%);
+    padding:120px 0;
+}
+
+.flx-home-clients-section::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+      linear-gradient(rgba(24,95,165,.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(24,95,165,.05) 1px, transparent 1px);
+    background-size:60px 60px;
+    pointer-events:none;
+}
+
+.flx-home-clients-section::after{
+    content:"";
+    position:absolute;
+    width:700px;
+    height:700px;
+    background:radial-gradient(circle,#3a8dff22,transparent 70%);
+    top:-250px;
+    right:-180px;
+    filter:blur(50px);
+}
+.flx-home-global-section{
+    position: relative;
+    background: #ffffff;
+    padding: 100px 0 120px;
+    overflow: hidden;
+}
+.flx-home-global-section::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px);
+
+    background-size: 70px 70px;
+    pointer-events: none;
+}
+
+.flx-home-global-header{
+
+    margin-bottom:60px;
+
+}
+
+.flx-home-global-small{
+
+    color:#5caeff;
+
+    letter-spacing:3px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    text-transform:uppercase;
+
+}
+
+.flx-home-global-title{
+
+    font-size:48px;
+
+    color:white;
+
+    font-weight:700;
+
+    margin:18px 0;
+
+}
+
+.flx-home-global-desc{
+
+    width:700px;
+
+    max-width:90%;
+
+    margin:auto;
+
+    color:#b9c3cf;
+
+    line-height:1.8;
+
+}
+.flx-home-global-section {
+  background-color: #020813; 
+  color: #ffffff;
+  padding: 80px 40px;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+.flx-home-global-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px auto;
+}
+
+.flx-home-global-small {
+  color: #00d2ff;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.flx-home-global-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.flx-home-global-desc {
+  color: #8fa0b5;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.flx-perspective-container {
+  perspective: 1200px; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.flx-home-map-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  transform: rotateX(24deg) rotateZ(-4deg); 
+  transform-style: preserve-3d;
+}
+.flx-map-grid {
+  position: absolute;
+  inset: -10%;
+  background-image: 
+    linear-gradient(rgba(0, 210, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 210, 255, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  transform: translateZ(-10px);
+  pointer-events: none;
+}
+
+.flx-home-world-map {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 0 25px rgba(0, 210, 255, 0.35)) contrast(1.1);
+}
+.flx-marker {
+  position: absolute;
+  transform-style: preserve-3d;
+  z-index: 10;
+}
+.flx-marker.uk { top: 32%; left: 47%; }
+.flx-marker.saudi { top: 56%; left: 60%; }
+.flx-marker.vietnam { top: 64%; left: 78%; }
+
+.flx-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #00d2ff;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #00d2ff, 0 0 30px #00d2ff;
+  cursor: pointer;
+}
+
+.flx-dot-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  margin-left: -15px;
+  margin-top: -15px;
+  border: 2px solid rgba(0, 210, 255, 0.6);
+  border-radius: 50%;
+  animation: flxPulse 2s infinite ease-out;
+  pointer-events: none;
+}
+
+@keyframes flxPulse {
+  0% { transform: scale(0.3); opacity: 1; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+.flx-popup {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  width: 260px;
+  transform: translateX(-50%) rotateX(-24deg) rotateZ(4deg) scale(0.8);
+  transform-origin: bottom center;
+  background: rgba(6, 18, 36, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 210, 255, 0.25);
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  pointer-events: none;
+}
+
+.flx-popup::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  width: 2px;
+  height: 15px;
+  background: linear-gradient(to bottom, rgba(0, 210, 255, 0.5), transparent);
+}
+.flx-marker:hover .flx-popup {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) rotateX(-24deg) rotateZ(4deg) scale(1) translateY(-5px);
+  pointer-events: auto;
+}
+
+.flx-popup-tag {
+  display: inline-block;
+  font-size: 11px;
+  color: #00d2ff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.flx-popup h3 {
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  line-height: 1.3;
+}
+
+.flx-popup p {
+  font-size: 12px;
+  color: #a0aec0;
+  margin: 0;
+}
+
+.flx-home-map-wrapper {
+  position: relative;
+}
+
+.flx-marker {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.flx-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #ff9f1c; 
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  box-shadow: 
+    0 0 0 2.5px #030d1a, 
+    0 0 10px rgba(255, 159, 28, 0.8);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s ease;
+}
+
+.flx-dot-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background-color: transparent;
+  border: 2px solid #ff9f1c;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  animation: flxPulseRing 2s infinite cubic-bezier(0.215, 0.610, 0.355, 1);
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes flxPulseRing {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(3.5);
+    opacity: 0;
+  }
+}
+.flx-marker:hover .flx-dot {
+  transform: scale(1.3);
+  background-color: #ff5722; 
+  box-shadow: 
+    0 0 0 2.5px #030d1a, 
+    0 0 15px rgba(255, 87, 34, 1);
+}
+
+.flx-marker:hover {
+  z-index: 20; 
+}
+
+.flx-popup {
+  position: absolute;
+  bottom: 20px; 
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  width: 280px;
+  padding: 16px;
+  background: rgba(10, 20, 38, 0.95); 
+  border: 1px solid rgba(255, 159, 28, 0.3); 
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: sans-serif;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255,255,255,0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  pointer-events: none; 
+}
+
+.flx-marker:hover .flx-popup {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+.flx-popup-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  color: #ff9f1c; 
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.flx-popup h3 {
+  font-size: 14px;
+  margin: 0 0 8px 0;
+  color: #ffffff;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.flx-popup p {
+  font-size: 11px;
+  margin: 0 0 6px 0;
+  color: #a0aec0; 
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.flx-popup p:last-child {
+  margin-bottom: 0;
+  color: #cbd5e0; 
+}
+
+.flx-popup::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px 6px 0;
+  border-style: solid;
+  border-color: rgba(10, 20, 38, 0.95) transparent;
+  display: block;
+  width: 0;
+}
+.flx-perspective-container {
+  perspective: 1000px; 
+  padding: 60px 0;   
+  overflow: visible;
+}
+.flx-home-map-wrapper {
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(25deg) rotateY(0deg); 
+  transition: transform 0.5s ease-out;
+}
+.flx-perspective-container:hover .flx-home-map-wrapper {
+  transform: rotateX(22deg) rotateY(-2deg); 
+}
+.flx-home-world-map {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 20px 30px rgba(0, 240, 255, 0.15)); 
+}
+
+.flx-marker {
+  position: absolute;
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%) rotateX(-25deg);
+  z-index: 10;
+  transition: transform 0.3s ease;
+}
+.flx-perspective-container:hover .flx-marker {
+  transform: translate(-50%, -50%) rotateX(-22deg) rotateY(2deg);
+}
+
+.flx-dot {
+  width: 14px;
+  height: 14px;
+  background-color: #ff9f1c; 
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  box-shadow: 
+    0 0 0 2.5px #030d1a, 
+    0 0 15px rgba(255, 159, 28, 0.9);
+}
+
+.flx-dot-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  background-color: transparent;
+  border: 2px solid #ff9f1c;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  animation: flxPulseRing 2s infinite cubic-bezier(0.215, 0.610, 0.355, 1);
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes flxPulseRing {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(3.5); opacity: 0; }
+}
+
+.flx-popup {
+  position: absolute;
+  bottom: 25px; 
+  left: 50%;
+  transform: translateX(-50%) translateZ(20px) scale(0.9);
+  width: 290px;
+  padding: 16px;
+  background: rgba(6, 15, 28, 0.96); 
+  border: 1px solid rgba(255, 159, 28, 0.4);
+  border-radius: 8px;
+  color: #ffffff;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), visibility 0.3s;
+  pointer-events: none;
+}
+.flx-marker:hover .flx-popup {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateZ(30px) scale(1); 
+}
+
+.flx-marker:hover {
+  z-index: 50;
+}
+.flx-popup-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  color: #ff9f1c;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.flx-popup h3 {
+  font-size: 14px;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+}
+
+.flx-popup p {
+  font-size: 11px;
+  margin: 0 0 6px 0;
+  color: #a0aec0;
+  line-height: 1.4;
+}
+
+.flx-footer-section {
+  background-color: #031824;
+  color: #ffffff;
+  padding: 80px 24px 100px 24px; 
+  border-top: 1px solid rgba(0, 240, 255, 0.15); 
+  position: relative;
+  overflow: hidden;
+}
+.flx-footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 50px;
+}
+.flx-footer-brand {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.flx-footer-logo-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+}
+
+.flx-footer-tagline {
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 6px;
+  text-transform: uppercase;
+}
+
+.flx-footer-manufacturer {
+  margin-top: 45px;
+}
+
+.flx-label-sm {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #a0aec0;
+  margin-bottom: 6px;
+}
+
+.flx-company-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin: 0;
+  color: #ffffff;
+}
+.flx-footer-info {
+  flex: 1.6;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.flx-info-block h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: #ffffff;
+  letter-spacing: 0.3px;
+}
+
+.flx-info-block p {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #cbd5e0;
+}
+.flx-info-meta {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.flx-info-meta p {
+  margin: 0;
+  color: #cbd5e0;
+}
+
+.flx-info-meta strong {
+  color: #ff9f1c; 
+  display: inline-block;
+  width: 130px;
+  font-weight: 600;
+}
+
+.flx-info-meta a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.flx-info-meta a:hover {
+  color: #ff9f1c; 
+  border-bottom-color: rgba(255, 159, 28, 0.4);
+}
+
+.flx-footer-section {
+  background: #ffffff;
+  border-top: 1px solid rgba(12, 68, 124, 0.08);
+  padding: 80px 0 0 0;
+  font-family: 'Poppins', sans-serif;
+  color: #0e1b2a;
+}
+.flx-footer-container {
+  width: 90%;
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2.5fr 1fr 1.3fr 1.3fr 1.3fr;
+  gap: 40px;
+  align-items: flex-start;
+  padding-bottom: 50px;
+}
+.flx-footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.flx-footer-logo-wrapper {
+  display: block;
+}
+
+.flx-footer-logo-image {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 4px;
+}
+
+.flx-footer-tagline {
+  display: block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #185fa5;
+}
+.flx-footer-manufacturer {
+  display: block;
+}
+
+.flx-label-sm {
+  display: block;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #5b6b7c;
+  margin-bottom: 6px;
+}
+
+.flx-company-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0c447c;
+  margin: 0 0 10px 0;
+  letter-spacing: -0.2px;
+}
+
+.flx-footer-about {
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: #5b6b7c;
+  margin: 0;
+}
+.flx-footer-column h4 {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #0c447c;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+}
+.flx-footer-nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.flx-footer-nav-links li {
+  margin-bottom: 12px;
+}
+
+.flx-footer-nav-links li a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #5b6b7c;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.flx-footer-nav-links li a:hover {
+  color: #185fa5;
+  transform: translateX(4px);
+}
+.flx-office-address {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #5b6b7c;
+  margin: 0;
+}
+.flx-contact-block {
+  margin-bottom: 14px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #5b6b7c;
+}
+
+.flx-contact-label {
+  color: #0c447c;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.flx-footer-link-item {
+  display: block;
+  text-decoration: none;
+  color: #5b6b7c;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.flx-footer-link-item:hover {
+  color: #185fa5;
+}
+
+.flx-footer-link-item.web-url {
+  font-weight: 600;
+  color: #0c447c;
+  margin-top: 4px;
+}
+.flx-footer-bottom {
+  border-top: 1px solid rgba(12, 68, 124, 0.08);
+  padding: 24px 0;
+  background: #f8fafc;
+}
+
+.flx-footer-bottom-container {
+  width: 90%;
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #5b6b7c;
+}
+
+.flx-iso-status {
+  font-weight: 600;
+  color: #0c447c;
+}
+
+@media (max-width: 1200px) {
+  .flx-footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  .flx-footer-brand {
+    grid-column: span 2;
+    max-width: 650px;
+  }
+}
+
+@media (max-width: 680px) {
+  .flx-footer-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .flx-footer-brand {
+    grid-column: span 1;
+  }
+  .flx-footer-bottom-container {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+.flx-home-global-section {
+  background: #030914; 
+  padding: 100px 0;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.flx-home-global-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px auto;
+  padding: 0 20px;
+}
+
+.flx-home-global-small {
+  font-size: 11px;
+  font-weight: 800;
+  color: #2f7bc7;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.flx-home-global-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
+}
+
+.flx-home-global-desc {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #94a3b8;
+}
+
+.flx-perspective-container {
+  width: 95%;
+  max-width: 1280px;
+  margin: 0 auto;
+  perspective: 1000px;
+}
+
+.flx-home-map-wrapper {
+  position: relative;
+  background: rgba(10, 25, 47, 0.4);
+  border: 1px solid rgba(47, 123, 199, 0.15);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8);
+}
+
+.flx-home-world-map {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 0.85;
+}
+.flx-marker {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+.flx-marker.uk { top: 41%; left: 41.5%; }
+.flx-marker.saudi { top: 69%; left: 55.5%; }
+.flx-marker.vietnam { top: 79%; left: 76.2%; }
+.flx-dot {
+  width: 10px;
+  height: 10px;
+  background: #ff9800;
+  border-radius: 50%;
+  z-index: 5;
+  box-shadow: 0 0 10px #ff9800;
+}
+
+.flx-dot-pulse {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border: 2px solid #ff9800;
+  border-radius: 50%;
+  animation: flxMarkerPulse 2s infinite ease-out;
+}
+
+@keyframes flxMarkerPulse {
+  0% { transform: scale(0.4); opacity: 0; }
+  30% { opacity: 0.7; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+.flx-popup-card {
+  position: absolute;
+  bottom: 20px;
+  left: -20px;
+  width: 220px;
+  background: rgba(6, 15, 30, 0.9);
+  border: 1px solid rgba(47, 123, 199, 0.3);
+  backdrop-filter: blur(12px);
+  border-radius: 10px;
+  padding: 14px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+  transform-origin: bottom left;
+  z-index: 10;
+}
+.flx-card-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ff9800, #ffb74d);
+  border-radius: 10px 10px 0 0;
+}
+
+.flx-popup-tag {
+  font-size: 9.5px;
+  font-weight: 800;
+  color: #ff9800;
+  letter-spacing: 1.5px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.flx-popup-card h3 {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+  line-height: 1.3;
+}
+
+.flx-popup-card .flx-address {
+  font-size: 11px;
+  line-height: 1.45;
+  color: #94a3b8;
+  margin: 0;
+}
+.flx-expanded-details {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.flx-contact-line {
+  font-size: 11px;
+  color: #cbd5e1;
+  margin-top: 8px;
+  line-height: 1.4;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding-top: 6px;
+}
+
+.flx-contact-line strong {
+  color: #2f7bc7;
+}
+
+.flx-card-btn {
+  display: block;
+  text-align: center;
+  background: #185fa5;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px;
+  border-radius: 4px;
+  margin-top: 12px;
+  transition: background 0.2s ease;
+}
+
+.flx-card-btn:hover {
+  background: #ff9800;
+}
+.flx-marker:hover .flx-popup-card {
+  width: 280px;
+  background: rgba(8, 21, 42, 0.96);
+  border-color: #ff9800;
+  box-shadow: 0 20px 45px rgba(255, 152, 0, 0.15);
+  z-index: 50;
+}
+
+.flx-marker:hover .flx-expanded-details {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 4px;
+}
+@media (max-width: 900px) {
+  .flx-popup-card {
+    display: none;
+  }
+}

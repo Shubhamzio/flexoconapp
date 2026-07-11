@@ -1,36 +1,169 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexocon India Private Limited</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-    <script>
-      /*
-      SPA GitHub Pages Redirect
-    */
+        body, html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000000; 
+        }
 
-      const path = window.location.pathname;
+        
+        .video-bg-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -2; 
+            overflow: hidden;
+            background: transparent;
+        }
 
-      const repo = "/";
+        #mechanical-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            object-fit: cover; 
+        }
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); 
+            z-index: -1; 
+        }
 
-      sessionStorage.redirect = path.replace(repo, "");
+        .content-wrapper {
+            position: relative;
+            z-index: 1; 
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 50px 8%;
+        }
 
-      window.location.replace(repo);
-    </script>
-  </head>
+        .company-name {
+            color: #ffffff;
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: 0.9;
+        }
+        .hero-section {
+            max-width: 800px;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
 
-  <body>
-    <script>
-      /*
-    Restore React Route
-  */
+        .main-heading {
+            color: #ffffff;
+            font-size: 3.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+        }
 
-      const redirect = sessionStorage.redirect;
+        .sub-heading {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.25rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        .button-group {
+            display: flex;
+            gap: 20px;
+        }
 
-      delete sessionStorage.redirect;
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+        }
 
-      if (redirect && redirect !== location.pathname) {
-        history.replaceState(null, null, redirect);
-      }
-    </script>
-  </body>
+        .btn-filled {
+            background-color: #ffffff;
+            color: #000000;
+            border: 2px solid #ffffff;
+        }
+
+        .btn-filled:hover {
+            background-color: transparent;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .main-heading { font-size: 2.5rem; }
+            .sub-heading { font-size: 1.05rem; }
+            .button-group { flex-direction: column; gap: 12px; }
+            .btn { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="video-bg-container">
+        <video autoplay muted loop playsinline preload="auto" id="mechanical-bg">
+            <source src="your-gears-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+    <div class="content-wrapper">
+        <header>
+            <p class="company-name">FLEXOCON INDIA PRIVATE LIMITED</p>
+        </header>
+
+        <main class="hero-section">
+            <h1 class="main-heading">Engineering Tomorrow's<br>Flexible Packaging Solutions</h1>
+            <p class="sub-heading">Delivering innovative Rotogravure Printing, Lamination, Slitting, Inspection and Packaging Machinery engineered with precision, quality and decades of manufacturing excellence.</p>
+            
+            <div class="button-group">
+                <a href="#" class="btn btn-filled">Explore Products</a>
+                <a href="#" class="btn btn-outline">Contact Us</a>
+            </div>
+        </main>
+        
+        <div></div>
+    </div>
+
+</body>
 </html>

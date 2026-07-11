@@ -1,5 +1,139 @@
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #0b0c10; 
+}
+.video-bg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    overflow: hidden;
+}
+
+#mechanical-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%);
+    z-index: -1; 
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 40px 8%;
+}
+.site-header {
+    margin-bottom: 80px;
+}
+
+.company-name {
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.9;
+}
+.hero-section {
+    max-width: 850px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.main-heading {
+    color: #ffffff;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 24px;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.sub-heading {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+.button-group {
+    display: flex;
+    gap: 16px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-filled {
+    background-color: #ffffff;
+    color: #000000;
+    border: 2px solid #ffffff;
+}
+
+.btn-filled:hover {
+    background-color: transparent;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.btn-outline:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+    .main-heading {
+        font-size: 2.3rem;
+    }
+    
+    .sub-heading {
+        font-size: 1rem;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .btn {
+        text-align: center;
+    }
 }
