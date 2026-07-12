@@ -711,6 +711,7 @@
         border-color .45s;
 }
 
+/* top energizing bar: sweeps in once the card is revealed, hover keeps it lit */
 .flx-industry-card::before{
     content:"";
     position:absolute;
@@ -721,7 +722,12 @@
     background:linear-gradient(90deg,#185fa5,#0c447c);
     transform:scaleX(0);
     transform-origin:left;
-    transition:transform .5s ease;
+    transition:transform .6s cubic-bezier(.22,1,.36,1);
+}
+
+.flx-industry-card.is-visible::before,
+.flx-industry-card:hover::before{
+    transform:scaleX(1);
 }
 
 .flx-industry-card::after{
@@ -744,27 +750,23 @@
 }
 
 .flx-industry-card:hover{
-
-    transform:
-        translateY(-12px)
-        scale(1.03);
-
+    transform:translateY(-12px) scale(1.03);
     border-color:#185fa5;
-
     box-shadow:
         0 35px 65px rgba(12,68,124,.20),
         0 10px 30px rgba(0,0,0,.08);
-}
-
-.flx-industry-card:hover::before{
-    transform:scaleX(1);
 }
 
 .flx-industry-card:hover::after{
     left:170%;
 }
 
+/* icon wrapper: a real cog shape spins quietly behind the icon, and a smaller
+   companion cog meshes at the corner — two rotating parts, like a coupling —
+   both idle slowly and speed up when the card is engaged (hover) */
 .flx-industry-icon{
+    position:relative;
+    z-index:1;
 
     width:56px;
     height:56px;
@@ -782,26 +784,77 @@
         background .45s,
         color .45s,
         box-shadow .45s;
+}
 
-    animation:industryFloat 3s ease-in-out infinite;
+.flx-industry-icon svg,
+.flx-industry-icon img{
+    position:relative;
+    z-index:2;
+}
+
+/* main cog */
+.flx-industry-icon::before{
+    content:"";
+    position:absolute;
+    inset:-11px;
+    z-index:0;
+    clip-path:polygon(
+        50% 2%, 70% 22.5%, 95.65% 35.17%, 82.34% 60.5%, 78.2% 88.8%,
+        50% 84%, 21.8% 88.8%, 17.66% 60.5%, 4.35% 35.17%, 30.02% 22.5%
+    );
+    background:linear-gradient(135deg, rgba(24,95,165,.20), rgba(12,68,124,.32));
+    animation:flxCogSpin 11s linear infinite;
+    transition:background .45s ease;
+}
+
+/* companion cog, meshed at the corner, counter-rotating */
+.flx-industry-icon::after{
+    content:"";
+    position:absolute;
+    z-index:0;
+    width:24px;
+    height:24px;
+    right:-12px;
+    bottom:-8px;
+    clip-path:polygon(
+        50% 2%, 70% 22.5%, 95.65% 35.17%, 82.34% 60.5%, 78.2% 88.8%,
+        50% 84%, 21.8% 88.8%, 17.66% 60.5%, 4.35% 35.17%, 30.02% 22.5%
+    );
+    background:linear-gradient(135deg, rgba(12,68,124,.55), rgba(24,95,165,.35));
+    opacity:.55;
+    animation:flxCogSpinReverse 5s linear infinite;
+    transition:opacity .4s ease, background .45s ease;
 }
 
 .flx-industry-card:hover .flx-industry-icon{
-
     background:linear-gradient(135deg,#185fa5,#0c447c);
-
     color:#fff;
-
-    transform:
-        rotate(-8deg)
-        scale(1.18);
-
-    box-shadow:
-        0 18px 36px rgba(12,68,124,.35);
+    transform:scale(1.1);
+    box-shadow:0 18px 36px rgba(12,68,124,.35);
 }
 
+.flx-industry-card:hover .flx-industry-icon::before{
+    background:linear-gradient(135deg, rgba(255,255,255,.6), rgba(255,255,255,.35));
+    animation-duration:2.6s;
+}
+
+.flx-industry-card:hover .flx-industry-icon::after{
+    opacity:1;
+    background:linear-gradient(135deg, rgba(255,255,255,.85), rgba(255,255,255,.5));
+    animation-duration:1.15s;
+}
+
+@keyframes flxCogSpin{
+    to{ transform:rotate(360deg); }
+}
+
+@keyframes flxCogSpinReverse{
+    to{ transform:rotate(-360deg); }
+}
 
 .flx-industry-card span{
+    position:relative;
+    z-index:1;
 
     font-size:18px;
     font-weight:700;
@@ -813,30 +866,17 @@
 }
 
 .flx-industry-card:hover span{
-
     color:#0c447c;
-
     transform:translateY(3px);
 }
 
-@keyframes industryFloat{
-
-    0%,100%{
-        transform:translateY(0px);
-    }
-
-    50%{
-        transform:translateY(-6px);
-    }
-
-}
-
+/* scroll-reveal, staggered per card so the row lights up left-to-right */
 .flx-industry-card.reveal{
     opacity:0;
     transform:translateY(40px);
     transition:
-        opacity .8s ease,
-        transform .8s ease;
+        opacity .7s ease,
+        transform .7s ease;
 }
 
 .flx-industry-card.reveal.is-visible{
@@ -844,12 +884,26 @@
     transform:translateY(0);
 }
 
-@media(max-width:768px){
+.flx-industry-card:nth-child(1){ transition-delay:0s; }
+.flx-industry-card:nth-child(2){ transition-delay:.08s; }
+.flx-industry-card:nth-child(3){ transition-delay:.16s; }
+.flx-industry-card:nth-child(4){ transition-delay:.24s; }
+.flx-industry-card:nth-child(5){ transition-delay:.32s; }
+.flx-industry-card:nth-child(6){ transition-delay:.40s; }
+.flx-industry-card:nth-child(7){ transition-delay:.48s; }
+.flx-industry-card:nth-child(8){ transition-delay:.56s; }
 
+@media(max-width:768px){
     .flx-industry-grid{
         grid-template-columns:1fr;
     }
+}
 
+@media (prefers-reduced-motion: reduce){
+    .flx-industry-icon::before,
+    .flx-industry-icon::after{
+        animation:none !important;
+    }
 }
 
 .flx-products-section {
@@ -1068,7 +1122,7 @@
 }
 
 .flx-wheel-product.active h3 {
-    color: #0c447c;
+    color: "black";
 }
 
 .flx-wheel-product > p {

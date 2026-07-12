@@ -410,7 +410,9 @@ const About = () => {
           <div className="flx-industry-grid">
             {industries.map((ind, i) => (
               <div className="flx-industry-card reveal" key={i} style={{ transitionDelay: `${i * 40}ms` }}>
-                <ind.icon className="flx-industry-icon" />
+                <div className="flx-industry-icon-wrap">
+                  <ind.icon className="flx-industry-icon" />
+                </div>
                 <span>{ind.label}</span>
               </div>
             ))}
